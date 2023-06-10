@@ -22,7 +22,9 @@ function Switch() {
             counter === 0 ? setIsOn(!isON) : setIsOn(isON)
             counter === 0 ? setIntervalTime(2000): setIntervalTime(1000)
         }, intervalTime);
+        
         return () => clearInterval(interval);
+       
     }, [counter, isON])
 
 
