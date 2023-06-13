@@ -5,9 +5,36 @@
   background-color: #46484b;
   display: flex;
   flex-direction: column;
+align-items: center;
+}
+
+.NavBar{
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  background-color: blue;
+  color: white;
+  text-decoration: none;
 }
+.NavItem {
+  width: 20%;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: comic;
+  font-size: 40px;
+  color: white;
+}
+.NavItem:hover{
+  background-color: lightblue;
+  cursor: pointer;
+}
+
 .bulbs{
   width: 100%;
   height: auto;

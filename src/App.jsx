@@ -1,18 +1,26 @@
-import { useState } from "react"
-import Switch from './component/Switch'
-import Timer from "./component/Timer";
+
+import LightApp from "./component/LightApp";
+import NavBar from "./component/NavBar";
+import Cities from "./component/Cities";
+import AboutUs from "./component/AboutUs";
+import { Routes, Route } from "react-router-dom";
 
 import './styles/App.css';
 
 function App() {
 
-  const [energia, setEnergia] = useState(false)
 
   return (
     <div className='body'>
-      <button onClick={() => setEnergia(!energia)}>Energia {energia ? "Encendida" : "Apagada"}</button>
-      <Timer />
-      {energia && <Switch />}
+
+      <NavBar />
+      <Routes>
+        <Route path="*" element={<LightApp />}></Route>
+        <Route path="/Home" element={<LightApp />}>  </Route>
+        <Route path="/Cities" element={<Cities />}></Route>
+        <Route path="/AboutUs" element={<AboutUs/>}></Route>
+      </Routes>
+
     </div>
   )
 }
