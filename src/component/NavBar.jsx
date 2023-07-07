@@ -24,8 +24,8 @@ function NavBar() {
         <div className="NavBar">
             <LinkRouter to={"/Home"}><h1>LOGO</h1></LinkRouter>
                 {
-                    NavLinks.map(link => {
-                        return <LinkRouter className="NavItem" to={link.path}>{link.name}</LinkRouter>
+                    NavLinks.map((link, index) => {
+                        return <LinkRouter key={index} className="NavItem" to={link.path}>{link.name}</LinkRouter>
                     })
 
                 }

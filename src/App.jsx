@@ -1,7 +1,7 @@
 
 import LightApp from "./component/LightApp";
 import NavBar from "./component/NavBar";
-import Cities from "./component/Cities";
+import Cities from "./component/cities/Cities";
 import AboutUs from "./component/AboutUs";
 import { Routes, Route } from "react-router-dom";
 
